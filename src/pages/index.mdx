@@ -1,0 +1,20 @@
+import WebPlayer from '../components/WebPlayer'
+import example from '../examples/index'
+
+React Native是一个用于构建跨平台应用的框架（除了项目本身支持的Android, IOS开发，还可以通过fork版本支持Windows, MacOS开发）。
+
+通过React Native创建应用是一件非常高效，并且让人着迷的事儿。但是上手Reac Native开发是有点棘手的。你应该搭配官方的[入门文档](https://reactnative.dev/docs/getting-started)来使用本手册。官方文档需要你对使用react开发web应用有些经验。如果碰到不会的东西，例如babel如何工作，可以使用手册中的示例来快速了解。本手册也涉及一些超出React Native官方文档范围的内容，例如Redux。
+
+希望你在学习React Native的过程中能够非常享受。在学习过程中遇到问题，可以去[@dvnabbott](https://twitter.com/dvnabbott)评论或者提问。一些章节是他人所作，都在每页的开头标出了，也欢迎联系他（她）们。
+
+> 原作者推销自己的书，[Fullstack React Native: The complete guide to React Native](https://gumroad.com/a/567063667)，用7个例子来深入讲解了一些React Native涉及的主题
+
+# Hello World
+
+当你创建了一个React Native应用，它应该长得跟下面差不多：
+
+<WebPlayer height={520} {...example} />
+
+如果你没怎么写过Javascript，那可能会对代码不怎么熟悉。因为自ES6+，JS加入了很多语法特性，以及React Native使用了JSX作为语法扩展。接下来的部分，我会讲讲涉及的语法部分。如果已经熟悉了某一个话题，那就跳过去。本手册的大多数部分都是相互独立。
+
+但是首先，让我们先设置React Native开发环境。
