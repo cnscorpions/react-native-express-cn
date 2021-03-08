@@ -26,7 +26,7 @@
 | :-------------------: | :----------------------: | :----------------: |
 |         Intro         |           介绍           | :white_check_mark: |
 |      Environment      |         环境配置         |   :construction:   |
-|      Quick Start      |         快速入门         |
+|      Quick Start      |         快速起步         | :white_check_mark: |
 |   Modern JavaScript   |     现代 Javascript      |
 |        ES2015         |          ES2015          |
 |          JSX          |           JSX            |
