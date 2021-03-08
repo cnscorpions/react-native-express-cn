@@ -1,8 +1,8 @@
 {
-  "name": "react-native-express",
-  "description": "Interactive examples, code samples, and tutorial projects for React Native",
+  "name": "react-native-express-cn",
+  "description": "快速上手React Native开发，带有交互式例子",
   "version": "1.0.0",
-  "author": "Devin Abbott <devinabbott@gmail.com> (http://github.com/dabbott)",
+  "author": "Gavin Chan <justin.coding@gmail.com> (https://github.com/cnscorpions)",
   "private": true,
   "scripts": {
     "dev": "next dev",
