@@ -2,6 +2,8 @@
 
 一份教你快速上手 React Native 的指南
 
+> 英文版本为 [dabbott/react-native-express](https://github.com/dabbott/react-native-express)
+
 <br/>
 
 ## 特点
