@@ -24,7 +24,7 @@ let sections = [
   },
   {
     depth: 1,
-    title: 'Quick Start',
+    title: '快速起步',
     slug: 'quick_start',
     componentName: 'QuickStart',
     author: jimmy,
@@ -409,16 +409,16 @@ const matches = (path, section) => {
 }
 
 export const getSection = (path, offset = 0) => {
-  const index = sections.findIndex((section) => matches(path, section))
+  const index = sections.findIndex(section => matches(path, section))
 
   if (index === -1) return null
 
   return sections[index + offset]
 }
 
-export const getNextSection = (path) => getSection(path, 1)
+export const getNextSection = path => getSection(path, 1)
 
-export const getPreviousSection = (path) => getSection(path, -1)
+export const getPreviousSection = path => getSection(path, -1)
 
 export const chapters = sections.reduce((ch, section) => {
   const { depth, hidden } = section

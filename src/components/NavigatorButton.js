@@ -59,14 +59,14 @@ export default class extends React.Component {
       <Container>
         {previousSection ? (
           <Link href={previousSection.slug}>
-            <Item>Previous - {previousSection.title}</Item>
+            <Item>上一章 - {previousSection.title}</Item>
           </Link>
         ) : (
           <div />
         )}
         {nextSection && (
           <Link href={nextSection.slug}>
-            <NextItem>下一节 - {nextSection.title}</NextItem>
+            <NextItem>下一章 - {nextSection.title}</NextItem>
           </Link>
         )}
       </Container>

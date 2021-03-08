@@ -1,19 +1,25 @@
-There are two common ways to set up a React Native development environment: [`expo-cli`](https://docs.expo.io/versions/latest/workflow/expo-cli/) and `react-native-cli`.
 
-# `expo-cli` (formerly `create-react-native-app`)
+通常，有两种创建React Native开发环境的方式，即[`expo-cli`](https://docs.expo.io/versions/latest/workflow/expo-cli/) 和 `react-native-cli`。
 
-This is a command-line utility for configuring and publishing React Native projects. _This is the best way to get started as a beginner_. This tool generates a QR code which you can scan to launch the app on your device. As you update your code, the changes will automatically be reflected on your device. In order to preview the app on your device, you'll be prompted to download the `Expo` app, which is a React Native app previewing client.
+# `expo-cli` (之前是 `create-react-native-app`)
 
-The downside to this approach is that it only works for pure-JavaScript apps. If at any point you need to use custom native modules (Obj-C/Swift, Java/Kotlin, etc), you'll need to `eject`. The `expo-cli` command line utility provides an `eject` command to export your app into the same format used by `react-native init`, which you can then add native modules to.
-We'll walk through this in the next section, [Quick Start](/quick_start).
+这是一个可以配置和发布React Native项目的脚手架，对初学者非常友好。工具生成一个二维码，你扫码后，应用会在你的设备上启动。当你更新代码，变更会自动反应在你的设备上。
+ 
+为了在设备上预览应用，你将需要根据提示下载`Expo`应用，这是一个预览React Native应用的客户端。
 
-The company behind `expo-cli`, [Expo](https://expo.io/), has been heavily involved in the React Native codebase and community since it's inception, so you can be confident that the tool is well-maintained and doesn't deviate too much from a "standard" React Native setup.
+这种方法的不足之处在于，它只对纯JS应用生效。如果你需要使用自定义的原生模块（Obj-C/Swift, Java/Kotlin等等），你将必须`eject`整个项目。
+
+`expo-cli`脚手架提供了一个`eject`命令，用于把你的整个应用导出。（**译者注，此时的项目结构和使用官方`react-native init`命令初始化之后的项目结构是一致的，可以添加原生模块**）
+
+我们会在之后的章节中详细讲解`expo-cli`相关知识，[快速起步](/quick_start)。
+
+`expo-cli`由[Expo](https://expo.io/)创建，它已经深深参入到React Native的代码库创建和社区治理中，确保了这个工具受到良好的维护，没有偏离React Native标准配置。
 
 # `react-native-cli`
 
-If you know you'll need custom native modules in your app, you'll want to use the `react-native-cli` to create your app. You can read how to do this on the Facebook docs for [Getting Started](https://facebook.github.io/react-native/docs/getting-started.html). Click on the "React Native CLI Quickstart" tab.
+如果你要使用自定义的原生模块，考虑使用`react-native-cli`来创建应用。你可以通过Facebook官方文档来学习，访问 [Getting Started](https://facebook.github.io/react-native/docs/getting-started.html), 点击"React Native CLI Quickstart"。
 
-In terms of the JavaScript code, the main difference from `expo-cli` is that `react-native-cli` requires registering the root component of your app using `AppRegistry.registerComponent`, e.g:
+关于JS代码，`react-native-cli`跟`expo-cli`的最大不同在于，`react-native-cli`要求通过`AppRegistry.registerComponent`注册应用根组件。举例：
 
 ```
 import {AppRegistry} from 'react-native';
@@ -23,8 +29,8 @@ import {name as appName} from './app.json';
 AppRegistry.registerComponent(appName, () => App);
 ```
 
-This allows you to optionally have multiple React Native root components, which you might embed into different native screens. `expo-cli` uses the default export of `App.js` as your root component.
+这让你可以注册多个React Native根组件，这些根组件可以嵌入到不同的原生屏幕中去。`expo-cli`使用`App.js`中的default export作为应用根组件。
 
-## Up Next
+## 接下来
 
-The following section will guide you through setting up a React Native app with `expo-cli`.
+下一章节将会引导你通过`expo-cli`创建一个React Native应用。

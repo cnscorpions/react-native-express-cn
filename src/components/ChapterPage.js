@@ -138,7 +138,7 @@ class ChapterPage extends React.Component {
             previousSection={previousSection}
           />
         </NavigatorButtonContainer>
-        {!isIntroduction && <BookBanner />}
+        {/* {!isIntroduction && <BookBanner />} */}
         {!isIntroduction && <Disqus title={title} identifier={slug} />}
       </Footer>
     )
@@ -185,7 +185,7 @@ class ChapterPage extends React.Component {
               </MenuButtonContainer>
               {isIntroduction ? (
                 <Page
-                  title={'2020 快速上手 React Native'}
+                  title={'2021 快速上手 React Native'}
                   subtitle={'学习跨平台应用框架 React Native'}
                   footer={footer}
                   bannerHeight={560}

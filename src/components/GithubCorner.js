@@ -4,9 +4,10 @@ export default class GithubCorner extends React.Component {
   render() {
     return (
       <a
-        href={'https://github.com/dabbott/react-native-express'}
+        href={'https://github.com/cnscorpions/react-native-express-cn'}
         className={'github-corner'}
-        title={'View source on Github'}
+        title={'到Github查看源码'}
+        target="_blank"
       >
         <svg
           width="80"
