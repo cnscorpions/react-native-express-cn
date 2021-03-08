@@ -32,7 +32,7 @@ let sections = [
 
   {
     depth: 0,
-    title: 'Modern JavaScript',
+    title: '现代 Javascript',
     slug: 'modern_javascript',
     componentName: 'ModernJavascript',
   },

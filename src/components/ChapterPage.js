@@ -138,7 +138,7 @@ class ChapterPage extends React.Component {
             previousSection={previousSection}
           />
         </NavigatorButtonContainer>
-        {/* {!isIntroduction && <BookBanner />} */}
+        {isIntroduction && <BookBanner />}
         {!isIntroduction && <Disqus title={title} identifier={slug} />}
       </Footer>
     )
