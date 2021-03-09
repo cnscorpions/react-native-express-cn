@@ -1,11 +1,14 @@
 import EditorTranspiler from '../components/EditorTranspiler'
 import example from '../examples/block_scoped_declarations'
 
+我们使用`const`和`let`来声明本地变量，而非`var`。主要区别在于，`var`是function-scoped，而`const`和`let`是block-scoped。
 
-Instead of using `var` to declare local variables, we use `const` and `let`. The main difference is that `var` is scoped to a function, while `const` and `let` are scoped to a block.
+此外，以`const`声明的变量仅可被赋值给一个值一次，否则编译器会报错。
 
-Additionally, variables declared with `const` can only be assigned a value once. Assigning another value to the same name will throw a compiler error. Note that if the value assigned to a `const` variable is an object or array, the object or array may still be modified. In other words, it's only the variable name that is bound permanently -- the value itself is still mutable.
+假使一个对象或数组被赋值给一个`const`，那么这个对象或数组依然可以被修改。换而言之，变量名是永久绑定，值自身依然是可变的。
 
 <EditorTranspiler {...example} />
 
-You'll notice that the compiled output replaces `const` and `let` with `var`. You'll also notice that Babel transforms `const a = 3` into `var _a = 3`. This is so that your code can run on older platforms that don't support the new block-scoped variable declarations. It's the Babel compiler that enforces proper usage and block-scoping, rather than the runtime JavaScript engine.
+你将会注意到编译后`const`和`let`被`var`替代，Babel把`const a = 3`转换成`var _a = 3`。这是你的代码能运行在不支持块级作用域变量声明的老平台上的原因。
+
+正是Babel编译器而非运行时JS引擎，强制执行block-scoping。

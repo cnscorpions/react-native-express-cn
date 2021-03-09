@@ -11,14 +11,14 @@ export default function MarkdownProvider({ children }) {
       components={{
         p: Paragraph,
         h1: SectionHeader,
-        h2: (props) => <div {...props} style={styles.h2} />,
-        strong: (props) => <strong {...props} style={styles.strong} />,
-        em: (props) => <em {...props} style={styles.em} />,
-        table: (props) => <table {...props} className={'table'} />,
+        h2: props => <div {...props} style={styles.h2} />,
+        strong: props => <strong {...props} style={styles.strong} />,
+        em: props => <em {...props} style={styles.em} />,
+        table: props => <table {...props} className={'table'} />,
         // a: Link,
-        img: (props) => <img alt="" style={styles.img} {...props} />,
-        pre: (props) => <pre {...props} style={styles.pre} />,
-        blockquote: (props) => (
+        img: props => <img alt="" style={styles.img} {...props} />,
+        pre: props => <pre {...props} style={styles.pre} />,
+        blockquote: props => (
           <blockquote {...props} style={styles.blockquote} />
         ),
       }}

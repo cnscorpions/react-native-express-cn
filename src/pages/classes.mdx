@@ -2,17 +2,18 @@ import EditorConsole from '../components/EditorConsole'
 import WebPlayer from '../components/WebPlayer'
 import { classExample, extendsExample } from '../examples/classes'
 
+在ES5中，"classes"被写作一般的函数，例如`function MyClass() {...}`，并且实例方法被赋值给`MyClass.prototype`。ES2015允许我们使用更简单的`class`语法。
 
-In ES5, "classes" are typically written as normal functions, e.g. `function MyClass() {...}`, with instance methods assigned to `MyClass.prototype`. ES2015 allows us to use the simpler `class` syntax.
+`class`给我们提供了内建的实例方法，静态方法，继承。`constructor`是一个特殊的函数，每次class的实例被创建的时候，它会自动被调用。
 
-`class` gives us built in instance functions, static functions, and inheritance. `constructor` is a special function that is called automatically every time a class instance is created. We can use the `static` keyword to declare static class functions. Static method calls are made directly on the class and cannot be called on instances of the class.
+我们能使用`static`关键字来声明静态类方法。class的静态方法直接在class上调用，不能在class实例上调用。
 
 <EditorConsole {...classExample} height={480} />
 
-# Inheritance
+# 继承
 
-`class` gives us simple inheritance with the keyword `extends`. Classes that inherit from a parent have access to respective parent functions via `super`.
+`class`通过关键字`extends`给我们提供了简单的继承功能。继承自父类的子类可以通过关键字`super`访问父类的函数。
 
 <EditorConsole {...extendsExample} height={480} />
 
-For full details on the `class` syntax, see the MDN reference for [class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes).
+要了解`class`语言全部细节，访问MDN文档[class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)。

@@ -1,9 +1,8 @@
 import EditorConsole from '../components/EditorConsole'
 import example from '../examples/async_await'
 
+我们能在一个函数的函数名之前加上`async`关键字，把函数返回值包裹到一个`Promise`中。我们能在`async`函数中使用`await`关键字，停止执行代码，直到promise被resolved或者rejected。
 
-We can use the `async` keyword before a function name to wrap the return value of this function in a `Promise`. We can use the `await` keyword (in an `async` function) to wait for a promise to be resolved or rejected before continuing code execution in this block.
-
-This syntax also propagates exceptions that occur in promises using a `try`/`catch` block, just as if the code were running synchronously.
+可以使用`try/catch`来捕获异常，就像在同步代码中使用一样。
 
 <EditorConsole {...example} />

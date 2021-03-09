@@ -1,12 +1,13 @@
 import EditorTranspiler from '../components/EditorTranspiler'
 import { importing, exporting } from '../examples/imports_and_exports'
 
+ES6 提供了一种相较于CommonJS更高级的模块导入/导出机制。
 
-ES6 provides a more advanced module importing/exporting pattern than the widely used CommonJS pattern. By contrast to the old `module.exports = {...}`, we can now export multiple named values. Similarly, we can import multiple named values.
+相较于`module.exports = {...}`，我们能export和import多个命名的值。
 
 There is one default export per file, and this exported value can be imported without refering to it by name. Every other import and export must be named.
 
-If you attempt to import an older CommonJS module using the new import syntax, Babel will handle the difference in format automatically at runtime. An old-style module won't have the special `__esModule` property added by Babel upon export.
+如果你尝试使用`import`语法来引入CommonJS模块，Babel在运行时会自动处理格式的不同，特殊的`__esModule`属性不会被添加。
 
 <EditorTranspiler {...importing} />
 
@@ -14,4 +15,4 @@ The imports in the previous example would be available if exported from the modu
 
 <EditorTranspiler {...exporting} />
 
-For full details on the importing/exporting syntax, see the MDN reference for [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) and [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export).
+要了解import/export语法的所有细节，可以参考MDN文档[import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) 和 [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export).

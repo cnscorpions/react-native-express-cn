@@ -6,7 +6,7 @@ export default class Input extends Component {
     text: '',
   }
 
-  onChangeText = (text) => this.setState({ text })
+  onChangeText = text => this.setState({ text })
 
   onSubmitEditing = () => {
     const { onSubmitEditing } = this.props

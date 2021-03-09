@@ -1,9 +1,10 @@
 import EditorConsole from '../components/EditorConsole'
 import example from '../examples/object_spread'
 
+类似与ES2015的数组spread操作符，ES2016为对象提供了`...` spread操作符。对象spread操作符底层使用ES2015的`Object.assign`，可以在Babel编译输出看到。这对于赋值或者扩展对象十分有用。
 
-Similar to the array spread operator in ES2015, ES2016 offers a spread operator `...` for objects. This tries to use ES2015's `Object.assign`, as you'll see when you view the babel output of the spread operator. This can be very useful in copying or extending objects.
+我们能简单通过`{...originalObj}`拷贝一个对象。注意这是一个浅拷贝。我们也能通过`{...originalObj, newKey: 'newValue'}`来扩展一个对象。
 
-We can copy an object simply with `{...originalObj}`. Note that this is a shallow copy. We can also extend an object with `{...originalObj, newKey: 'newValue'}`. Similarly to `assign`, when duplicate keys appear in a spread, the last assignment of that key takes priority.
+类似与`assign`，当重复的键值出现在一个spread中，之后的赋值会覆盖之前的赋值。
 
 <EditorConsole {...example} height={400} />

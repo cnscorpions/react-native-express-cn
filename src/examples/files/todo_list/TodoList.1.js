@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 const extractKey = ({ label }) => label
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   items: state.items,
 })
 

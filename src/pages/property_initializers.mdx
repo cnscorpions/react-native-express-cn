@@ -4,14 +4,14 @@ import {
   functionExample,
 } from '../examples/property_initializers'
 
-
-Class properties are a convenient way to declare properties for each instance, equivalent to assigning these properties in the constructor function.
+Class属性是一种非常方便地为每个类实例声明属性的方式，等价于在`construction`中给属性赋值。
 
 <EditorConsole {...propertyExample} height={400} />
 
-When a function is assigned to a instance property, that function is bound to the instance.
+当一个函数被赋值给一个实例属性，这个函数会被绑定到这个实例。
 
-Before ES2016, you might bind functions to class instances in the `constructor`, e.g. `this.func = this.func.bind(this)`. Binding that way ensures that a class's instance function is invoked with the correct context.
-With ES2016 class instance properties, we can instead write `func = () => ...`. `func` is then bound to the class instance at construction.
+在ES2016之前，你可以会在`construction`中把函数绑定到类实例上，例如`this.func = this.func.bind(this)`。这种方式绑定会确保类的实例函数是在正确的上下文环境被调用。
+
+通过ES2016类实例属性，我们能写作`func = () => ...`，`func`实现了绑定。
 
 <EditorConsole {...functionExample} height={500} />

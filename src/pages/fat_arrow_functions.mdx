@@ -1,9 +1,11 @@
 import EditorTranspiler from '../components/EditorTranspiler'
 import example from '../examples/fat_arrow_functions'
 
+**箭头函数** `=>` 用于定义匿名函数。
 
-The **fat arrow** `=>` is used to define anonymous functions. There are two important differences in the behavior of these functions, compared to functions defined with `function`.
+相较于使用关键字`function`定义的函数，箭头函数有两大重要的不同。
 
+第一，关键字`this`的绑定，在箭头函数内外是一致的。
 First, the binding for the keyword `this` is the same outside and inside the fat arrow function. This is different than functions declared with `function`, which can bind `this` to another other object upon invocation. Maintaining the `this` binding is very convenient for operations like mapping: `this.items.map(x => this.doSomethingWith(x))`.
 
 Second, fat arrow functions don't have an `arguments` object defined. You can achieve the same thing using the **spread syntax**: `(...args) => doSomething(args[0], args[1])`.

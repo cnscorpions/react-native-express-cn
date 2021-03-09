@@ -120,7 +120,7 @@ class Sidebar extends Component {
     return { expanded }
   }
 
-  onToggleSection = (slug) =>
+  onToggleSection = slug =>
     this.setState({
       expanded: {
         ...this.state.expanded,
@@ -193,7 +193,7 @@ class Sidebar extends Component {
           </Link>
         </SidebarTitle>
         <SidebarRowsContainer centered={centered} tabIndex="-1">
-          {chapters.map((group) => {
+          {chapters.map(group => {
             return [
               group.map(this.renderRow),
               <DotContainer key={'dot-container'}>
