@@ -125,7 +125,7 @@ let sections = [
 
   {
     depth: 0,
-    title: 'React Components',
+    title: 'React组件',
     slug: 'components',
     componentName: 'Component',
   },

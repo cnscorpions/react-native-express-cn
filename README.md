@@ -29,8 +29,8 @@
 |      Quick Start      |         快速起步         | :white_check_mark: |
 |   Modern JavaScript   |     现代 Javascript      | :white_check_mark: |
 |        ES2015         |          ES2015          |   :construction:   |
-|          JSX          |           JSX            |   :construction:   |
-|   React Components    |        React 组件        |
+|          JSX          |           JSX            | :white_check_mark: |
+|   React Components    |        React 组件        |   :construction:   |
 |     Component API     |      Component API       |
 |     Lifecycle API     |         生命周期         |
 |    Core Components    |         核心组件         |

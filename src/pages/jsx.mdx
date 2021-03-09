@@ -1,13 +1,10 @@
 import EditorTranspiler from '../components/EditorTranspiler'
 import example from '../examples/jsx'
 
+JSX是一种Javascript语法扩展，给JS增加了一种新的表达形式。JSX是一种使用`React.createElement()` API的捷径，它更准确，更易读，视觉上有点类似生成的UI（都是树形结构）。
 
-JSX is an extension to JavaScript that adds a new kind of <b>expression</b>. You can use JSX expressions anywhere you could use any other expression.
+你不是非要使用JSX，但这确实没啥缺点，嗯，你大概应该用用它。JSX是基于标签的XML。每个标签，像是 `<View />`，被转化为一个对`React.createElement()`的调用。任何attributes会变成实例化组件的`props`。attributes可以是像`foo='hello'`一样的字符串，也可以是被包裹在花括号中的JS插值表达式，就像`bar={baz}`。
 
-JSX is a shortcut for using the `React.createElement()` API, that is much more concise, easy to read, and visually looks a little like the generated UI (as both are tree-like). You don't <i>have to</i> use JSX, but there are practically no disadvantages, so you probably should use it.
-
-JSX is tag-based like XML. Each tag, like `<View />`, is transformed into a call to `React.createElement()`. Any attributes become `props` of the instantiated component. Attributes can be strings like `foo='hello'`, or they can be interpolated JavaScript expressions when wrapped in curly braces as in `bar={baz}` (which would refer to the variable baz).
-
-Tags can be self-closing, like `<View />`, or they can include both an opening and closing tag, like `<View></View>`. To include children elements, you will need to use an opening and closing tag and put the children tags within.
+JSX标签是可以自闭合的，就像`<View />`，或者包括开闭标签，像`<View></View>`。为了包含子元素，你需要使用开闭标签，把子元素放它们中间。
 
 <EditorTranspiler {...example} />
