@@ -27,8 +27,8 @@
 |         Intro         |           介绍           | :white_check_mark: |
 |      Environment      |         环境配置         | :white_check_mark: |
 |      Quick Start      |         快速起步         | :white_check_mark: |
-|   Modern JavaScript   |     现代 Javascript      |   :construction:   |
-|        ES2015         |          ES2015          |
+|   Modern JavaScript   |     现代 Javascript      | :white_check_mark: |
+|        ES2015         |          ES2015          |   :construction:   |
 |          JSX          |           JSX            |
 |   React Components    |        React 组件        |
 |     Component API     |      Component API       |
