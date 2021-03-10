@@ -1,7 +1,8 @@
 
+React Native提供了几十个开箱即用的核心组件。更多复杂的组件可以通过组合核心组件实现。
 
-React Native includes a few dozen core components which can be used out-of-the-box. More complex components can be built by combining the core components in interesting ways.
+近乎所有核心组件都继承自`View`组件，并且可以可选地传一个`style`属性。`style`属性可以包括视觉属性像是颜色和边框，以及该布局属性。
 
-Nearly all the core components extend the `View` component, and can be passed an optional `style` prop. The style can include visual properties like colors and borders, as well as layout properties. Components use the flexbox algorithm to specify the layout of their children.
+组件们使用flexbox算法来指定子组件的布局。
 
-Let's now take a look at the flexbox algorithm and some of the most common core components. If you want to dive deeper, I cover these topics in great detail in the "Core Components" chapter of my [book](https://www.fullstackreact.com/react-native/).
+让我们了解下flexbox算法和一些常用核心组件。

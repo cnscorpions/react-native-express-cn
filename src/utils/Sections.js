@@ -144,7 +144,7 @@ let sections = [
 
   {
     depth: 0,
-    title: 'Core Components',
+    title: '核心组件',
     slug: 'core_components',
     componentName: 'CoreComponents',
   },

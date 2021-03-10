@@ -33,8 +33,8 @@
 |   React Components    |        React 组件        | :white_check_mark: |
 |     Component API     |      Component API       | :white_check_mark: |
 |     Lifecycle API     |         生命周期         | :white_check_mark: |
-|    Core Components    |         核心组件         |   :construction:   |
-|         View          |         容器组件         |
+|    Core Components    |         核心组件         | :white_check_mark: |
+|         View          |         容器组件         |   :construction:   |
 |        Flexbox        |        Flex 布局         |
 |         Text          |         文本组件         |
 |         Image         |         图片组件         |
