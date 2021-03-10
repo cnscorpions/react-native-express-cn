@@ -137,7 +137,7 @@ let sections = [
   },
   {
     depth: 1,
-    title: 'Lifecycle API',
+    title: '生命周期 API',
     slug: 'lifecycle_api',
     componentName: 'LifecycleAPI',
   },

@@ -1,25 +1,26 @@
 import WebPlayer from '../components/WebPlayer'
 import example from '../examples/component_api'
 
-
 ## **`this.props`**
 
-`Components` can be configured upon instantiation by passing properties to the `constructor` - these properties are called `props`. `props` may be accessed from within the component's methods as `this.props`, in order to alter how the component is rendered and/or how it behaves. However, `props` must <b>not be altered</b> from within the component's methods.
+通过向`constructor`传递属性，这些属性被称之为`props`，我们可以在组件实例化的时候配置`Components`。为了改变组件的渲染和行为，我们通过`this.props`来访问`props`。然而，**React不允许我们在组件的方法中修改`props`**。
 
-A parent element may alter a child element's `props` at any time. The child element will generally re-render itself to reflect its new configuration parameters. A child component may decide not to re-render itself even though its configuration has changed, as determined by `shouldComponentUpdate()` (more on this in the Component Lifecycle API section).
+一个父级元素可以在任何时间修改它的子元素的`props`。这个子元素会自己re-render以反应新的配置参数。
+
+尽管父级组件传入的`props`已经发生改变，一个子组件可能不执行re-render，加入`shouldComponentUpdate() { return false; }`即可（关于这个函数在组件生命周期的章节有更多内容）。
 
 ## **`this.state`**
 
-`Components` may maintain their state internally within the object `state`. `this.state` may be accessed from within component methods. Unlike `props`, parent elements may not access a child's `state`, as it is intended to manage the child's internal state rather than external configuration.
+`Components`通过`state`对象来维护内部状态。我们可以在组件的方法中访问`this.state`。不像`props`，父级组件无法访问子组件的`state`，因为`state`旨在管理子组件的内部状态而非外部配置。
 
-Note that you should <i>never</i> directly assign to a specific key within the `state` object, e.g. `this.state.foo = 'bar'`, but instead use the method `this.setState()`.
+注意你不应该直接给`state`对象某个key赋值，例如`this.state.foo = 'bar'`，反而应该使用`this.setState()`方法。
 
 ## **`this.setState(object newState)`**
 
-`Components` may update their `state` by passing an object to the method `this.setState()`. Any keys in the object passed to the method will be merged into (and override any existing keys in) `this.state`.
+通过传一个对象给`this.setState()`方法，`Components`可以更新它们的状态。对象的key将会合并到`this.state`对象中，覆盖掉现存的keys。
 
 # Example
 
-The following example includes a `Counter` component that maintains the elapsed time internally as `state.count`. The `App` component renders the `Counter` component with two `props`: `size` and `color`. The `App` can easily render several `Counter` components with different sizes and colors.
+下面的例子包含一个`Counter`组件，它通过`state.count`内部维护着运行时间。`App`组件渲染带有两个`props`：`size`和`color`的`Counter`组件。`App`能够容易地渲染几个不同尺寸和颜色地`Counter`组件。
 
 <WebPlayer {...example} />

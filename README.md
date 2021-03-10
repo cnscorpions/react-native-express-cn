@@ -31,8 +31,8 @@
 |        ES2015         |          ES2015          |   :construction:   |
 |          JSX          |           JSX            | :white_check_mark: |
 |   React Components    |        React 组件        | :white_check_mark: |
-|     Component API     |      Component API       |   :construction:   |
-|     Lifecycle API     |         生命周期         |
+|     Component API     |      Component API       | :white_check_mark: |
+|     Lifecycle API     |         生命周期         |   :construction:   |
 |    Core Components    |         核心组件         |
 |         View          |         容器组件         |
 |        Flexbox        |        Flex 布局         |
