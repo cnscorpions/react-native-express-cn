@@ -30,8 +30,8 @@
 |   Modern JavaScript   |     现代 Javascript      | :white_check_mark: |
 |        ES2015         |          ES2015          |   :construction:   |
 |          JSX          |           JSX            | :white_check_mark: |
-|   React Components    |        React 组件        |   :construction:   |
-|     Component API     |      Component API       |
+|   React Components    |        React 组件        | :white_check_mark: |
+|     Component API     |      Component API       |   :construction:   |
 |     Lifecycle API     |         生命周期         |
 |    Core Components    |         核心组件         |
 |         View          |         容器组件         |
