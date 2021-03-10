@@ -154,7 +154,7 @@ let sections = [
   { depth: 1, title: '图片组件', slug: 'image', componentName: 'Image' },
   {
     depth: 1,
-    title: 'ScrollView',
+    title: '滚动容器组件',
     slug: 'scrollview',
     componentName: 'ScrollView',
   },

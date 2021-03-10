@@ -1,3 +1,4 @@
+
 ## 关于
 
 一份教你快速上手 React Native 的指南
@@ -37,9 +38,9 @@
 |         View          |         容器组件         | :white_check_mark: |
 |        Flexbox        |        Flex 布局         | :white_check_mark: |
 |         Text          |         文本组件         | :white_check_mark: |
-|         Image         |         图片组件         |   :construction:   |
-|      ScrollView       |       滚动容器组件       |
-|         Lists         |         列表组件         |
+|         Image         |         图片组件         | :white_check_mark: |
+|      ScrollView       |       滚动容器组件       | :white_check_mark: |
+|         Lists         |         列表组件         |   :construction:   |
 |  Component Libraries  |        流行组件库        |
 |    Data Management    |         状态管理         |
 |    Component State    |        组件内状态        |
