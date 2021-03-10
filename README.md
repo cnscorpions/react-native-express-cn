@@ -36,8 +36,8 @@
 |    Core Components    |         核心组件         | :white_check_mark: |
 |         View          |         容器组件         | :white_check_mark: |
 |        Flexbox        |        Flex 布局         | :white_check_mark: |
-|         Text          |         文本组件         |   :construction:   |
-|         Image         |         图片组件         |
+|         Text          |         文本组件         | :white_check_mark: |
+|         Image         |         图片组件         |   :construction:   |
 |      ScrollView       |       滚动容器组件       |
 |         Lists         |         列表组件         |
 |  Component Libraries  |        流行组件库        |

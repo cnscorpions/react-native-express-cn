@@ -150,8 +150,8 @@ let sections = [
   },
   { depth: 1, title: '容器组件', slug: 'view', componentName: 'View' },
   { depth: 1, title: 'Flex 布局', slug: 'flexbox', componentName: 'Flexbox' },
-  { depth: 1, title: 'Text', slug: 'text', componentName: 'Text' },
-  { depth: 1, title: 'Image', slug: 'image', componentName: 'Image' },
+  { depth: 1, title: '文本组件', slug: 'text', componentName: 'Text' },
+  { depth: 1, title: '图片组件', slug: 'image', componentName: 'Image' },
   {
     depth: 1,
     title: 'ScrollView',
