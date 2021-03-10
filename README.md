@@ -35,8 +35,8 @@
 |     Lifecycle API     |         生命周期         | :white_check_mark: |
 |    Core Components    |         核心组件         | :white_check_mark: |
 |         View          |         容器组件         | :white_check_mark: |
-|        Flexbox        |        Flex 布局         |   :construction:   |
-|         Text          |         文本组件         |
+|        Flexbox        |        Flex 布局         | :white_check_mark: |
+|         Text          |         文本组件         |   :construction:   |
 |         Image         |         图片组件         |
 |      ScrollView       |       滚动容器组件       |
 |         Lists         |         列表组件         |

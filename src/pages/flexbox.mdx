@@ -1,17 +1,20 @@
 import WebPlayer from '../components/WebPlayer'
 import example from '../examples/flexbox'
 
+> React Native中flex布局和CSS flex布局基本一致，**如果熟悉CSS flex布局，可以跳过本章**。
 
-Components specify the layout of their children using the <b>flexbox</b> algorithm. Using flexbox lets you specify a layout that expands or shrinks to fill screens of various dimensions. You can seamlessly mix and match these automatic layouts with fixed sizes like <code>width: 100</code>.
+组件使用**flexbox**算法指定它们子组件的布局。使用flexbox让你指定布局，扩展或收缩以适应各种屏幕的尺寸。
 
-To choose the right layout for a component's children, you must make 3 choices:
+你能无缝地混用flex布局和像`width: 100`这样的固定布局，以适应各种布局。
 
-| Property         | Default      | Options                                                     | Description                                                                                                                                                                                                                                              |
+为了给组件的子组件选择正确的布局，下面三项你需要做些选择：
+
+| 属性         | 默认值      | 选项                                                     | 描述                                                                                                                                                                                                                                              |
 | ---------------- | ------------ | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `flexDirection`  | `column`     | `row, column`                                               | Do you want a vertical (`column`) or horizontal (`row`) layout? This choice determines the orientation of the **primary axis** of your layout.                                                                                                           |
-| `justifyContent` | `flex-start` | `flex-start, center, flex-end, space-around, space-between` | How should the content be distributed along the <b>primary axis</b> of your layout? Should it be at the start, the center, the end, or spaced evenly?                                                                                                    |
-| `alignItems`     | `stretch`    | `flex-start, center, flex-end, stretch`                     | How should the content be aligned along the <b>secondary axis</b> of your layout? (If the primary axis is `row`, then the secondary axis is `column`, and vice versa) Should content be aligned at the start, the center, the end, or stretched to fill? |
+| `flexDirection`  | `column`     | `row, column`                                               | 你想要垂直布局(`column`)还是水平布局(`row`)？这个选择决定了你布局的**主轴**方向。                                                                                                                                                                               |
+| `justifyContent` | `flex-start` | `flex-start, center, flex-end, space-around, space-between` | 内容是如何沿着主轴分布的？ 沿主轴方面的开始，中间，末尾，还是两端均匀分布？                                                                                                  |
+| `alignItems`     | `stretch`    | `flex-start, center, flex-end, stretch`                     | 内容如何沿着附轴分布？ |
 
-The following example lets you try all the possible combinations of flexbox properties and layouts.
+下面例子让你尝试所有flexbox属性和布局的组合。
 
 <WebPlayer {...example} />
