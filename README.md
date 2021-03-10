@@ -8,9 +8,9 @@
 
 ## 特点
 
-- 🚀 内容精简，特为迅速上手 RN 开发准备
+- 🚀 内容精简，特为迅速上手 React Native 开发准备
 - 😍 提供交互式例子，动动手更快熟悉知识点
-- 💪 覆盖 RN 日常开发的绝大部分工具链
+- 💪 覆盖 React Native 日常开发的绝大部分工具链
 
 <br/>
 
@@ -34,8 +34,8 @@
 |     Component API     |      Component API       | :white_check_mark: |
 |     Lifecycle API     |         生命周期         | :white_check_mark: |
 |    Core Components    |         核心组件         | :white_check_mark: |
-|         View          |         容器组件         |   :construction:   |
-|        Flexbox        |        Flex 布局         |
+|         View          |         容器组件         | :white_check_mark: |
+|        Flexbox        |        Flex 布局         |   :construction:   |
 |         Text          |         文本组件         |
 |         Image         |         图片组件         |
 |      ScrollView       |       滚动容器组件       |

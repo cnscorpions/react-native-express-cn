@@ -1,14 +1,17 @@
 import WebPlayer from '../components/WebPlayer'
 import example from '../examples/view'
 
+`View`s是React Native应用的最基本的构造块，就像`div`s是网站最基本的构造块一样。在实现方面，`View`是在目标平台的原生构造块之上的一层抽象，无论是`UIView`, `android.view`, `<div>`还是其他。
 
-`View`s are the most basic building block of React Native apps, much like how `div`s are the most basic building block of websites. In terms of implementation, `View` is an abstraction layer on top of the target platform's native equivalent, whether that's `UIView`, `android.view`, `<div>`, or something else.
+`View`s主要用于给子元素们添加样式和规划布局。让我们看下一些能添加到views的样式。
 
-`View`s are primarily used for styling and layout of children elements. Let's look at a few of the styles we can apply to views. The example below contains two `View`s: the outer view which specifies the alignment of the content contained within, and the inner view which draws a blue square.
+下面的例子包含两个`View`s：外面的view指定了其包含内容的对齐方式，内部的view画了一个蓝色的正方形。
 
 <WebPlayer {...example} />
 
-Below you can find the most common styles. Feel free to experiment with them in the example code.
+在下面你能找到最常用的样式。随意在例子中试下。
+
+> 本章节下面的各种样式不翻译了，也没必要，直接看下官网的就好了。
 
 # Layout Styles
 

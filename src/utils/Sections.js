@@ -148,7 +148,7 @@ let sections = [
     slug: 'core_components',
     componentName: 'CoreComponents',
   },
-  { depth: 1, title: 'View', slug: 'view', componentName: 'View' },
+  { depth: 1, title: '容器组件', slug: 'view', componentName: 'View' },
   { depth: 1, title: 'Flexbox', slug: 'flexbox', componentName: 'Flexbox' },
   { depth: 1, title: 'Text', slug: 'text', componentName: 'Text' },
   { depth: 1, title: 'Image', slug: 'image', componentName: 'Image' },
