@@ -1,11 +1,14 @@
 import WebPlayer from '../components/WebPlayer'
 import example from '../examples/flatlist'
 
+`FlatList`s适用于存在大量滚动内容的场景。它们暴露了底层的`ScrollView`，但做了性能提升：只渲染屏幕上的内容（剪裁掉屏幕外的内容），并且仅仅发生变更的列表行。就像`ScrollView`s，他们可以水平或垂直滚动。
 
-`FlatList`s are used for large quantities of scrollable content. They expose the underlying `ScrollView`, but add performance improvements: only rendering the content on screen (clipping offscreen content), and only updating rows that have changed. Like `ScrollView`s, they can scroll horizontally or vertically.
+`FlatList`s通过`renderItem`属性来渲染data属性的每个item，而非它们的`children`属性。
 
-Instead of rendering their `children` prop, `FlatList`s render each item in their input `data` using the `renderItem` prop. The `renderItem` prop is a function which takes an item from the `data` array and maps it to a React Element. Each item in `data` should be an object with a unique id, so that React can determine when items are rearranged. The unique id is looked up as `item.key` by default, but you can specify another way to find/build a the id by passing a `keyExtractor` function prop.
+`renderItem`属性是一个函数，它从`data`数组中取一个item，然后映射到一个React元素。`data`的每个item应该是一个带有唯一id的对象。
 
-# Basic Example
+以便React能决定什么时候items需要重新排列。默认情况下，唯一id是通过`item.key`来查询，但是你能可以通过`keyExtractor`props实现自定义。
+
+# 基础例子
 
 <WebPlayer {...example} />

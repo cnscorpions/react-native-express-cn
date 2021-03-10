@@ -158,7 +158,7 @@ let sections = [
     slug: 'scrollview',
     componentName: 'ScrollView',
   },
-  { depth: 1, title: 'Lists', slug: 'lists', componentName: 'Lists' },
+  { depth: 1, title: '列表组件', slug: 'lists', componentName: 'Lists' },
   { depth: 2, title: 'FlatList', slug: 'flatlist', componentName: 'FlatList' },
   {
     depth: 2,

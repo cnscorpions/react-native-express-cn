@@ -1,10 +1,13 @@
 import WebPlayer from '../components/WebPlayer'
 import { homogenousExample, heterogenousExample } from '../examples/sectionlist'
 
+`SectionList`s和`FlatList`s很像，但是它们可以通过标题来划分组。
 
-`SectionList`s are like `FlatList`s, but they can have section headers to separate groups of rows.
+`SectionList`s使用`renderSectionHeader`和`renderItem`来渲染`sections`的每个item。
 
-`SectionList`s render each item in their input `sections` using the `renderSectionHeader` and `renderItem` prop. Each item in `sections` should be an object with a unique id (the key), and an array `data` of row data. Each item in `data` should also be an object with a unique id. The `renderSectionHeader` prop is a function which takes an item from the `sections` array and maps it to a React Element. The `renderItem` prop, just like for `FlatList`, is a function which takes an item from the `data` array (for a section) and returns a React Element.
+`sections`的每个item都应该是一个带有唯一id的对象和行数据的一个`data`数组。`data`中每个item都应该是一个带有唯一id的对象。
+
+The `renderSectionHeader` prop is a function which takes an item from the `sections` array and maps it to a React Element. The `renderItem` prop, just like for `FlatList`, is a function which takes an item from the `data` array (for a section) and returns a React Element.
 
 # Homogenous Row Example
 

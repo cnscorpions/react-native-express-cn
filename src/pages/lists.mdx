@@ -1,5 +1,8 @@
 
+Lists就像ScrollViews，但在优化后通过循环使用元素，减少re-renders，提升了性能。因此，APIs比ScrollView性能更复杂。
 
-Lists are like ScrollViews, but optimized to recycle elements and reduce re-renders for better performance. As a result, the APIs are a little more complicated than ScrollView. The built-in list components in React Native are still evolving, so you can expect more features and performance from these in the future.
+React Native内建的list组件依然在进化，所以你可以期待在未来它们有更多的特征和更高的性能。
 
-FlatList and SectionList are the recommended list components for simple, performant lists. They're built on top of VirtualizedList, which is a highly flexible and optimized list implementation, which generally shouldn't be used directly. These replace the (now deprecated) ListView component.
+因为易于使用和高性能，`FlatList`和`SectionList`收到追捧。
+
+它们是基于VirtualizedList实现，而VirtualizedList是一种高度灵活，充分优化的list实现，我们不应该直接使用VirtualizedList。`FlatList`和`SectionList`替代了已经废弃的`ListView`

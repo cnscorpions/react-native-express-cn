@@ -41,7 +41,7 @@
 |         Image         |         图片组件         | :white_check_mark: |
 |      ScrollView       |       滚动容器组件       | :white_check_mark: |
 |         Lists         |         列表组件         |   :construction:   |
-|  Component Libraries  |        流行组件库        |
+|  Component Libraries  |        流行组件库        |   :construction:   |
 |    Data Management    |         状态管理         |
 |    Component State    |        组件内状态        |
 |         Redux         |          Redux           |
