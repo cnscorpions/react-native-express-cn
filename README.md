@@ -43,8 +43,8 @@
 |         Lists         |         列表组件         |   :construction:   |
 |  Component Libraries  |        流行组件库        | :white_check_mark: |
 |    Data Management    |         状态管理         | :white_check_mark: |
-|    Component State    |        组件内状态        |   :construction:   |
-|         Redux         |          Redux           |
+|    Component State    |        组件内状态        | :white_check_mark: |
+|         Redux         |          Redux           |   :construction:   |
 |         Realm         | 移动端款平台数据库 Realm |
 |      Persistence      |        数据持久化        |
 |     Redux Persist     |    Redux 持久化中间件    |

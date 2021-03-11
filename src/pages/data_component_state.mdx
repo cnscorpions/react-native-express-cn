@@ -1,39 +1,37 @@
 import WebPlayer from '../components/WebPlayer'
 import example from '../examples/data_component_state'
 
+在组件的`state`中存储数据对于小型app是很棒的，应用的各个部分是相互隔离的。创建组件最好的方式是把他们分成两类：**容器组件** 和 **展示组件**。
 
-Storing data in the `state` of your components is great for small apps, and portions of an app which are isolated from the rest of the app.
+## 容器组件
 
-The best way to build components is generally to group them in two categories: <b>containers</b> and <b>components</b>.
+容器组件以props的形式传递数据和回调函数给展示组件，并且当用户和应用交互的时候处理数据更新。
 
-## Container/Smart Components
+## 展示组件
 
-Container components are application-logic-specific components. They're usually just called "containers". You may also hear "smart" components, or occasionally, View-Controllers.
+大多数组件不应该包含任何业务逻辑。因为完全通用并且仅有的输入为`props`，这些展示组件能轻易地被各个不同的应用使用。
 
-Containers are aware of the data and logic unique to your application. Containers pass data and callbacks as props to presentational components, and handle updating the data when a user interacts with the app.
+# 例子
 
-## Presentational/Dumb Components
+让我们看一个To-Do应用。
 
-Most components should not contain any business-logic. These presentational components could easily be used in a different app, since they are completely generic, and their only input is their `props`. Presentational components are often simply called "components".
+这个应用有一个容器组件，`App`，和3个展示组件（普通组件）：`List`, `Input` 和 `Title`。一般来说，每个容器组件和展示组件应该放在一个单独的文件中，并且应该是该文件的默认导出。我们为文件指定与组件相同的名称，例如一个叫做`Input`组件应该放在`Input.js`文件中去。
 
-# Example
-
-Let's take a look at a To-Do List app.
-
-This app has 1 container, `App`, and 3 components: `List`, `Input`, and `Title`. Generally, each container and component should live in a separate file, and should be the `default` export of that file. We give the file the same name as the component, e.g. a component called `Input` should live in `Input.js`. In React Native, component names <i>must</i> be capitalized, so the file name will usually be capitalized too.
+在React Native，组件名称必须大写，所以文件名通常那个也大写。
 
 ## Files
 
 - `App.js`<br />
-  `App` is a "smart" container component, containing the To-Do list data and logic for adding/removing items. `App` renders the `List`, `Input`, and `Title` components, passing To-Do list data and callbacks for modifying the list.
+    `App`是一个容器组件，包含To-Do应用数据和添加/删除列表项的业务逻辑。
+    `App`渲染了`List`，`Input`和`Title`组件，传递数据和回调函数以修改列表。
 
 - `List.js`<br />
-  This component renders a list of strings. It fires an `onPressItem` callback when an item is pressed.
+  这个组件渲染了一个字符串list。当一个列表项被按压的时候，`onPressItem`回调函数会被触发。
 
 - `Input.js`<br />
-  This component renders an input field. It maintains the current input in its state, and then fires a callback, `onSubmitEditing` when the user presses Submit.
+  组件渲染了一个输入框。它在状态中维护了当前的输入，当用户点击提交的时候，`onSubmitEditing`函数会被调用。
 
 - `Title.js`<br />
-  A simple title component. Purely presentational.
+    一个简单的标题组件，纯展示用的。
 
 <WebPlayer {...example} />

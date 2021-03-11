@@ -180,7 +180,7 @@ let sections = [
   { depth: 0, title: '状态管理', slug: 'data', componentName: 'Data' },
   {
     depth: 1,
-    title: 'Component State',
+    title: '组件内状态',
     slug: 'data_component_state',
     componentName: 'ComponentState',
   },
