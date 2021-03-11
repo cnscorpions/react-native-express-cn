@@ -44,8 +44,8 @@
 |  Component Libraries  |        流行组件库        | :white_check_mark: |
 |    Data Management    |         状态管理         | :white_check_mark: |
 |    Component State    |        组件内状态        | :white_check_mark: |
-|         Redux         |          Redux           |   :construction:   |
-|         Realm         | 移动端款平台数据库 Realm |
+|         Redux         |          Redux           | :white_check_mark: |
+|         Realm         | 移动端款平台数据库 Realm |   :construction:   |
 |      Persistence      |        数据持久化        |
 |     Redux Persist     |    Redux 持久化中间件    |
 |      Networking       |         网络请求         |
@@ -105,3 +105,4 @@ npm run start
 
 作者：Devin Abbott, [@dvnabbott](https://github.com/dabbott) <br/>
 翻译：Gavin Chan, [@cnscorpions](https://github.com/cnscorpions)
+

@@ -1,49 +1,53 @@
 import WebPlayer from '../components/WebPlayer'
 import example from '../examples/react_redux'
 
+Redux 对 React 的官方绑定包叫 [React Redux](http://redux.js.org/docs/basics/UsageWithReact.html)。
 
-Redux has official bindings for React in a package called [React Redux](http://redux.js.org/docs/basics/UsageWithReact.html).
+在前面的例子中，我们直接在容器组件的文件中导入了`store`对象。然后我们用`store.subscribe()`开始监听`componentDidMount`中的变化，并确保在`componentWillUnmount`中取消订阅。我们用`store.dispatch(action)`来调度action。
 
-In the previous examples, we imported the `store` object directly in our container component's file. We then started listening to changes in `componentDidMount` with `store.subscribe()`, and we made sure to unsubscribe in `componentWillUnmount`. We dispatched actions with `store.dispatch(action)`.
+这样使用Redux会有一些问题：
 
-There are a few issues with using Redux this way:
+- 在我们的组件中订阅和退订store是很繁琐的，而且容易出错。
+- 每个容器组件都会在store的每一次变化中重新渲染，这有可能成为一个性能问题。
+- 使用store直接将整个store的API暴露给我们的组件，一般来说，组件只需要知道`dispatch()`API即可。
 
-- Subscribing and unsubscribing to the store in our components is tedious and error-prone.
-- Every container component will re-render on _every_ change to the store, potentially becoming a performance issue.
-- Using the store directly exposes the entire store API to our components; generally, components only need to be aware of the `dispatch()` API.
-
-React Redux addresses these issues.
+React Redux解决了这些问题。
 
 # React Redux API
 
 ## `Provider`
 
-React Redux exposes the `Provider` component to handle passing our store to every container component. We'll generally use this to wrap the root component of our app, e.g. `<Provider store={store}> ... </Provider>`.
+React Redux暴露了`Provider`组件，将我们的store传递给每个容器组件。我们通常会用它来包装我们的应用根组件，例如`<Provider store={store}>......</Provider>`。
 
 ## `connect(mapStateToProps)(Component) => Component`
 
-We use `connect()` to access the state of our `store` in our container components. Call `connect(mapStateToProps)` with a function that takes the state of the store, mapping it to `props` to be passed into our container component, `(state) => props`. Calling `connect()` returns <b>another function</b>, which we should then call with our container component, `connect(...)(Component)`, to get a "connected" component. This connected component will automatically have a `dispatch` prop (for dispatching actions), and the result of `mapStateToProps` will be merged into the component's props.
+我们使用`connect()`来访问容器组件中`store`的状态。调用`connect(mapStateToProps)`，用一个函数获取store的状态，将其映射到`props`中，传递到我们的容器组件中，`(state) => props`。调用`connect()`返回<b>另一个函数</b>，然后我们应该用容器组件调用`connect(...)(Component)`，得到一个 "connect"组件。这个"connect"组件将自动拥有一个`dispatch`属性（用于调度动作），`mapStateToProps`的结果将被合并到组件属性中。
 
-## That's enough to get started!
+## 这就够了，可以开始了!
 
-There are more APIs, and more parameters to the `connect()` function, but these are the ones you need to get going. Feel free to read more about React Redux in the [docs](http://redux.js.org/docs/basics/UsageWithReact.html).
+还有更多的API，以及更多的`connect()`函数参数，但这些都是你需要去做的。欢迎在[docs](http://redux.js.org/docs/basics/UsageWithReact.html)中阅读更多关于React Redux的内容。
 
-# To-Do List Example
+# To-Do列表例子
 
-Let's take a look at our To-Do List app again, now that it's using React Redux.
+让我们再来看看我们的待办事项列表应用，现在它使用了React Redux。
 
-## Files
+## 文件
 
 - `index.js`<br />
-  This file handles creating the redux store and passing it to our `Provider`. The `Provider` will let us connect our `App` container to the store with `connect()`.
+
+    这个文件创建redux store并将其传递给我们的`provider`。`Provider`将让我们用`connect()`将我们的`App`容器连接到store。
 
 - `todoListRedux.js`<br />
-  The same as in the Redux example.
+
+    与Redux的例子相同。
 
 - `App.js`<br />
-  `App` is connected to the store using `connect()`. It pulls the list data, `todos`, out of the store's state using `mapStateToProps`. It uses the `dispatch()` function added to its props to dispatch actions to modify the store.
+
+    `App`使用`connect()`连接到store。它使用`mapStateToProps`将列表数据`todos`从store的状态中拉出来，添加到props的`dispatch()`函数来调度修改store的动作。
 
 - `List.js`, `Input.js`, `Title.js`<br />
-  Presentational components - these are the same as in the Component State example.
+
+
+  都是展示组件。
 
 <WebPlayer {...example} />

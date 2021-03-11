@@ -17,12 +17,15 @@ Thanks to Redux Thunk, we can now dispatch functions. When we dispatch a functio
 ## Files
 
 - `index.js`<br />
-  This file handles creating the redux store and passing it to our `Provider`. It also handles applying the `thunk` middleware to our store, for handling asynchronous actions.
+
+    这个文件中创建redux store并将其传递给我们的`Provider`。它还将 "thunk "中间件应用到store，以处理异步操作。
 
 - `postsRedux.js`<br />
-  This contains the actionCreators and reducer for fetching posts and updating the store.
+
+    这包含了用于获取帖子和更新store的actionCreators和reducer。
 
 - `App.js`<br />
-  `App` is connected to the store using `connect()`. It pulls the post data, along with loading and error states, out of the redux store.
+
+    `App`使用`connect()`连接到store。它从redux商店中提取帖子数据，以及加载和错误的状态。
 
 <WebPlayer {...example} />

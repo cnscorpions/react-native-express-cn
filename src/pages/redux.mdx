@@ -1,48 +1,54 @@
 import WebPlayer from '../components/WebPlayer'
 import { minimalExample, advancedExample } from '../examples/redux'
 
-Most medium and large React Native apps use Redux for managing data and state throughout the application. Redux is a fairly expansive topic, so we'll just cover basic usage with React Native here, leaving more advanced usage to the [Redux docs](http://redux.js.org/).
+大多数中大型React Native使用Redux来管理整个应用的数据和状态。
 
-# Redux Architecture
+Redux是一个相当广泛的话题，所以我们将在这里介绍React Native的基本用法，更多高级用法去看 [Redux文档](http://redux.js.org/)。
+
+# Redux 架构
 
 ## **`store`**
 
-An application will create a single Redux `store` to hold <i>all</i> data and state. We can view the state of the store by calling `store.getState()`. The store's state should never be modified directly; instead, we call `store.dispatch(action)` to dispatch actions into the store.
+一个应用程序将创建一个单一的Redux store，以保存所有数据和状态。我们可以通过调用`store.getState()`来查看store的状态。store的状态永远不应该被直接修改，相反，我们调用`store.dispatch(action)`来将派发actions到store中。
 
 ## **`action`**
 
-`action`s should be plain objects containing a `type` field, e.g. `{type: 'INCREMENT'}`. You can define any types you want. You may also include other fields in the `action` object. By convention, we often pass extra data in a `payload` field, e.g. `{type: 'SET_VALUE', payload: 42}`. Read more about `action` conventions here: [Flux Standard Actions](https://github.com/acdlite/flux-standard-action).
+`action`s应该是包含`type`字段的普通对象，例如`{type: 'INCREMENT'}`。你可以定义任何你想要的类型。你也可以在`action`对象中包含其他字段。按照惯例，我们经常在`payload`字段中传递额外的数据，例如`{type: 'SET_VALUE', payload: 42}`。阅读更多关于 "action" 内容访问 [Flux Standard Actions](https://github.com/acdlite/flux-standard-action)。
 
 ## **`reducer`**
 
-You then define a function to handle `action`s, and update the `store` accordingly. You can choose how to update the state depending on which `type` of action your `reducer` function receives. Redux will pass this function the current state of the store, and the action you dispatched, expecting an updated state object to be returned: `(state, action) => newState`. We call this function a `reducer` function.
+然后你定义一个函数来处理`action`s，并相应地更新`store`。你可以根据你的 "reducer "函数接收到的action的 "类型 "来选择如何更新状态。Redux会将当前store的状态，以及你派发的action传递给这个函数，期望返回一个更新后的状态对象：`(state, action) => newState`。我们称这个函数为`reducer`函数。
 
 ## That's it!
 
-There are a lot of new terms, but it's actually not that complicated once you start using it. We'll look at two examples: an extremely minimal (contrived) example, and then the same To-Do list app from the Component State example.
+有很多新的术语，但实际上一旦你开始使用它，它就没有那么复杂。我们将看两个例子：一个最简单的的例子，然后是To-Do。
 
-# Minimal Example
+# 简单例子
 
-This example shows the bare minimum steps necessary to set up a redux `store`, define `action` types, and define a `reducer` function to handle them.
+这个例子展示了创建redux `store`、定义`action`类型和定义`reducer`函数所需的最基本步骤。
 
 <WebPlayer {...minimalExample} />
 
-# To-Do List Example
+# To-Do应用例子
 
-Let's take a look at our To-Do List app again, now that it's using Redux.
+我们再来看看我们的待办事项列表应用，现在已经使用Redux了。
 
-## Files
+## 文件
 
 - `App.js`<br />
-  `App` is a "smart" container component. It is aware of our application's state and can fire actions to update the state, using the helper functions we defined in `actionCreators`. The container subscribes to the store, updating its own state and the props of its children whenever the store's state changes in response to an action.
+
+  `App`是一个容器组件。它知道我们应用的状态，并可以使用我们在`actionCreators`中定义的帮助函数触发action来更新状态。容器会订阅store，每当store的状态因action而改变时，它就会更新自己的状态和其子组件的props。
 
 - `store.js`<br />
-  This file handles creating the redux store and passing it to our `App` container.
+
+    这个文件处理了redux store的创建，并且把它传递给`App`容器。
 
 - `todoListRedux.js`<br />
-  Defines the action types, the reducer function, and `actionCreators` helper functions to create actions. Note that we also moved `initialState` into this file (redux allows you to either pass it into your store on creation, or return it from your reducer).
+
+  定义了action类型、reducer函数和`actionCreators`帮助函数来创建actions。请注意，我们还将`initialState`移到了这个文件中（redux允许你在创建时将其传入你的store，或者从reducer中返回）。
 
 - `List.js`, `Input.js`, `Title.js`<br />
-  Presentational components - these are the same as in the Component State example.
+
+    都是展示组件。
 
 <WebPlayer {...advancedExample} />
