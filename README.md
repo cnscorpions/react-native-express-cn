@@ -41,9 +41,9 @@
 |         Image         |         图片组件         | :white_check_mark: |
 |      ScrollView       |       滚动容器组件       | :white_check_mark: |
 |         Lists         |         列表组件         |   :construction:   |
-|  Component Libraries  |        流行组件库        |   :construction:   |
-|    Data Management    |         状态管理         |
-|    Component State    |        组件内状态        |
+|  Component Libraries  |        流行组件库        | :white_check_mark: |
+|    Data Management    |         状态管理         | :white_check_mark: |
+|    Component State    |        组件内状态        |   :construction:   |
 |         Redux         |          Redux           |
 |         Realm         | 移动端款平台数据库 Realm |
 |      Persistence      |        数据持久化        |

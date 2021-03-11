@@ -169,7 +169,7 @@ let sections = [
 
   {
     depth: 0,
-    title: 'Component Libraries',
+    title: '流行组件库',
     slug: 'component_libraries',
     componentName: 'ComponentLibraries',
   },
@@ -177,7 +177,7 @@ let sections = [
   // {depth: 2, title: 'Themes', slug: 'shoutem_ui_theme', componentName: 'ShoutemUITheme', fullTitle: 'Shoutem Themes'},
   // {depth: 2, title: 'Animation', slug: 'shoutem_ui_animation', componentName: 'ShoutemUIAnimation', fullTitle: 'Shoutem Animation'},
 
-  { depth: 0, title: 'Data Management', slug: 'data', componentName: 'Data' },
+  { depth: 0, title: '状态管理', slug: 'data', componentName: 'Data' },
   {
     depth: 1,
     title: 'Component State',

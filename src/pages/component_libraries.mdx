@@ -1,19 +1,18 @@
 import GithubRepositoryLink from '../components/GithubRepositoryLink'
 
+在React Native核心组件之外，还存在很多开源的组件库。组件库的大小和形态各异，从桥接原生平台能力的单一组件库（例如地图，视频组件库等等）到大型的组件集合（对我们web开发者都会想到Bootstrap）。
 
-Beyond the React Native core components, there are many open source component libraries. Libraries vary in size and shape, from individual components that bridge native platform functionality (e.g. maps, video, etc) to large component collections (for web folks, think Bootstrap).
+如果你感觉UI学的差不多，可以先跳到[状态管理](data)，之后再回来看这些。
 
-If you feel you've learned enough about UI for now, feel free to skip ahead to [data management](data) and come back to these later.
+# Component 集合
 
-# Component Collections
+当你开始编写一个新的应用，值得考虑使用一个组件集合。它们提供了数十乃至几百个设计一致，开箱可用的组件，加速了你的开发进程。组件集合加速开发，让你专注在应用架构和业务逻辑，不被React Native的布局和样式分散注意力。
 
-When beginning a new app, it's worth considering using a component collection. These provide tens or potentially hundreds of consistently designed, cross-platform components out-of-the-box to accelerate your development process.
+如果你没有跟专业的设计师或设计团队紧密合作，使用组件集合是一个好的方式来创建应用。然而，组件集合无法满足所有应用需求：它们增添了很多代码和复杂度，可能无法随心所欲地定制。
 
-Component collections speed up development by letting you focus on the architecture and business logic of the app, without focusing on the nuances of layout and styling in React Native. If you aren't working with a dedicated designer or design team, these can be a great way to build an app with a highly polished look and feel.
+如果你有设计资源，从头开始开发应用很可能给灵活性，让应用来得刚刚好。
 
-However, component collections aren't for every app: they can add a lot of code and complexity, and you may not be able to customize them as much as you like. If you're working closely with a designer or design team, it's likely that starting from scratch will give you the flexibility you need to make the app look just right.
-
-Currently, the largest component collections are:
+现在，最大的组件集合是：
 
 - <GithubRepositoryLink
     user={'react-native-community'}
