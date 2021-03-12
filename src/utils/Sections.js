@@ -267,7 +267,7 @@ let sections = [
 
   {
     depth: 0,
-    title: 'Boilerplates',
+    title: '模板',
     slug: 'boilerplates',
     componentName: 'Boilerplates',
   },

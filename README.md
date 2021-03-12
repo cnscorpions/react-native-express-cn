@@ -54,7 +54,7 @@
 |       Animated        |         Animated         | :white_check_mark: |
 |     RN Animatable     |      RN Animatable       | :white_check_mark: |
 |       Gestures        |           手势           | :white_check_mark: |
-|     Boilerplates      |           模板           |   :construction:   |
+|     Boilerplates      |           模板           | :white_check_mark: |
 
 <br/>
 

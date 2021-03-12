@@ -1,61 +1,50 @@
 import GithubRepositoryLink from '../components/GithubRepositoryLink'
 
+配置一个新的React Native项目可能非常耗时，鉴于大多数项目至少需要：Redux、路由/导航、数据持久化、网络调用和测试。这还不包括其他更多的特定用途的库，如：微软的CodePush，用于OTA更新JavaScript打包文件（无需通过App Store提交更新），fastlane用于自动部署，redux sagas用于复杂的状态管理，或国际化。
 
-Setting up a new React Native project can be very time-consuming. Setting up a project typically takes 2-3 days, given that most projects need <i>at minimum</i>: Redux, routing/navigation, data persistence, network calls, and tests. This doesn't include other more use-case-specific libraries like: Microsoft CodePush for updating the JavaScript bundle over the air (without submitting an update through the App Store), fastlane for automated deployment, redux sagas for complex state management, or internationalization.
+为了节省大量的时间、精力和令人头疼的问题，从一个模板React Native项目开始通常是有帮助的。模板包含了一组特定的库，用于满足常见的需求，如网络调用，这些库可以开箱即用，并且与项目中包含的其他库不冲突。模板通常已经选择了一些库，为你做了大部分选择，同时提供很少的定制功能。
 
-To save a lot of time, effort, and headaches, it's often helpful to start with a boilerplate React Native project. Boilerplates contain a specific set of libraries for common needs such as network calls, which work out of the box and don't conflict with the other libraries included in the project. Boilerplates are typically very opinionated about the libraries they include, making most choices for you, while offering little customization.
-
-At the moment, the main boilerplate worth considering is:
+目前，值得考虑的主要模板是：
 
 - <GithubRepositoryLink user={'infinitered'} repo={'ignite'} title={'Ignite'} />
 
-In the past, there were other popular boilerplates, but they don't seem to be maintained any more.
+在过去，还有其他流行的模板，但似乎不再维护了。
 
 <table className={'table'}>
   <thead>
     <tr>
-      <th style={{ width: 145 }}>Using a boilerplate</th>
+      <th style={{ width: 145 }}>使用模板优缺点</th>
       <th />
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Pros</td>
+      <td>优点</td>
       <td>
         <ul>
           <li>
-            Boilerplates let you skip the project setup and get started with
-            business logic and your app's UI immediately. This can be especially
-            valuable on a team with many engineers, who would otherwise be
-            blocked until the project setup is complete.
+            模板可以让您跳过项目设置，立即开始使用写业务逻辑和应用界面。这对于一个拥有许多工程师的团队来说尤其有价值，否则他们只能在项目设置完成之后开始干活。
             <br />
             <br />
           </li>
         </ul>
         <ul>
           <li>
-            Boilerplates correctly configure many complex technologies, making
-            sure they work together, and provide a good developer experience
-            (many libraries need custom configuration to work with hot
-            reloading, etc).
+            模板正确地配置了许多复杂的技术，确保它们能一起工作，并提供了良好的开发者体验（许多库需要自定义配置以启用热重载等）。
             <br />
             <br />
           </li>
         </ul>
         <ul>
           <li>
-            It is typically faster and less error-prone to rip out code that
-            isn't needed, rather than than building up from scratch.
+            一般来说，删掉不需要的代码比从头开始构建更快，更不容易出错。
             <br />
             <br />
           </li>
         </ul>
         <ul>
           <li>
-            Boilerplates often have a lot of people using and contributing, who
-            can help answer questions when you get stuck. It's likely that these
-            people have the exact same project setup as you, and will be able to
-            offer better suggestions than those who have never seen your project
+            模板往往有很多人在使用和贡献，当你被卡住的时候，他们可以帮助回答问题。这些人很可能和你有完全相同的项目设置，并且能够提供比那些从未见过你的项目的人更好的建议。
             setup.
             <br />
             <br />
@@ -63,10 +52,7 @@ In the past, there were other popular boilerplates, but they don't seem to be ma
         </ul>
         <ul>
           <li>
-            When you want to update React Native (which can be difficult and
-            time consuming if you have custom native modules), you can see how
-            the boilerplate accomplished the update, and do the same in your
-            project.
+           当你想更新React Native时（如果你有自定义的原生模块，这可能很困难，也很耗时），你可以看到boilerplate是如何完成更新的，并在你的项目中做同样的事情。
             <br />
             <br />
           </li>
@@ -74,44 +60,32 @@ In the past, there were other popular boilerplates, but they don't seem to be ma
       </td>
     </tr>
     <tr>
-      <td>Cons</td>
+      <td>缺点</td>
       <td>
         <ul>
           <li>
-            A boilerplate is unlikely to make the same technical decisions that
-            you would about your app, given that: you know your use case best,
-            and you may have experience with certain libraries that you want to
-            leverage. You'll never find a perfect boilerplate.
+          模板不太可能跟你做出同样的技术选型，考虑到：你最了解你的用例，而且你可能在某些你想用的库方面有经验。你永远找不到一个完美的模板。
             <br />
             <br />
           </li>
         </ul>
         <ul>
           <li>
-            Boilerplates attempt to work for a broad set of use cases. They will
-            almost certainly contain libraries and starter files that you won't
-            need, and that you'll want to delete before you start working. You
-            may also want to add or swap libraries.
+           模板试图为一组广泛的用例工作，它们几乎肯定包含了你不需要的库和启动文件，而且在你开始工作之前，你会想要删除它们。你可能还想添加或更换库。
             <br />
             <br />
           </li>
         </ul>
         <ul>
           <li>
-            Boilerplates tend to be large, and may contain a lot of unfamiliar
-            code. Part of the unfamiliar code may even be unique to the
-            boilerplate, so nobody on your team will be familiar with it either.
-            You'll have to start by learning your boilerplate inside and out.
+            模板往往很大，可能包含很多不熟悉的代码。部分不熟悉的代码甚至可能是模板所独有的，所以你的团队中也没有人熟悉它。你必须先学习你的模板，把它搞清楚。
             <br />
             <br />
           </li>
         </ul>
         <ul>
           <li>
-            When you want to update React Native, you'll have to make sure all
-            of your project's dependencies work with the new version. Since
-            boilerplates tend to include a lot of dependencies, you may have a
-            lot of work to do before your app runs successfully again.
+           当你想更新React Native时，你必须确保你的项目的所有依赖关系都能与新版本兼容。由于锅炉模板往往包含很多依赖项，因此在你的应用再次成功运行之前，你可能要做很多工作。
             <br />
             <br />
           </li>
