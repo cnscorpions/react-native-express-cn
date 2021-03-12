@@ -1,18 +1,17 @@
 import WebPlayer from '../components/WebPlayer'
 import example from '../examples/gestures'
 
-
-In React Native, gestures are created using the `PanResponder` API.
+在React Native中，使用`PanResponder`API创建手势。
 
 ## **`PanResponder`**
 
-Most built-in React Native components (`View`, `Text`, etc) can become a responder and handle touch events. You'll need to create a set of `panHandlers` and pass them into your component as props. Call `{'panResponder = PanResponder.create(panHandlers)'}` with an object containing handlers to create a `PanResponder`. You can then access `panResponder.panHandlers`, which will be an enhanced version of the handlers object you passed in.
+大多数内置的React Native组件(`View`、`Text`等)都可以成为responser者并处理触摸事件。你需要创建一组`panHandlers`，并将它们作为prop传递到你的组件中。使用包含handler 的对象调用`{'panResponder = PanResponder.create(panHandlers)'}`来创建一个`PanResponder`。然后你可以访问`panResponder.panHandlers`，它将是你传入的handler 对象的增强版。
 
 ## **`PanHandlers`**
 
-You will likely want to handle `onStartShouldSetPanResponder` or `onMoveShouldSetPanResponder` to become a response and handle the gesture. Beyond that, you'll likely want to handle the `Grant`, `Move`, `Release`, and `Terminate` to update your UI in response to the gesture. Unless you have many complex gestures in your app, you generally won't need to include every handler to get a working gesture.
+你可能会想要处理`onStartShouldSetPanResponder`或`onMoveShouldSetPanResponder`来成为一个responser并处理手势。除此之外，你很可能想要处理`Grant`、`Move`、`Release`和`Terminate`来更新你的UI以响应手势。除非你的应用程序中有许多复杂的手势，否则你一般不需要包含每个handler 来获得一个生效的手势。
 
-Here's the list of _all_ handlers:
+这里是所有handlers的列表。
 
 - `onMoveShouldSetPanResponder: (e, gestureState) => {...}`
 - `onMoveShouldSetPanResponderCapture: (e, gestureState) => {...}`
@@ -28,15 +27,15 @@ Here's the list of _all_ handlers:
 - `onPanResponderTerminationRequest: (e, gestureState) => {...}`
 - `onShouldBlockNativeResponder: (e, gestureState) => {...}`
 
-More details are available on each of these in the [docs](https://facebook.github.io/react-native/docs/panresponder.html).
+更多详情请见[docs](https://facebook.github.io/react-native/docs/panresponder.html)。
 
-# Example
+# 例子
 
 <WebPlayer {...example} />
 
-# Responder Control Flow
+# Responder 控制流
 
-The following diagram illustrates how a component can acquire responder status.
+下图说明了一个组件如何获得responder的状态。
 
 <figure>
   <img style={{ paddingTop: 40, width: 550 }} src={'pan-responder-flow.png'} />

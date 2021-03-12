@@ -259,7 +259,7 @@ let sections = [
     slug: 'react_native_animatable',
     componentName: 'ReactNativeAnimatable',
   },
-  { depth: 1, title: 'Gestures', slug: 'gestures', componentName: 'Gestures' },
+  { depth: 1, title: '手势', slug: 'gestures', componentName: 'Gestures' },
 
   // {depth: 0, title: 'Navigation', slug: 'navigation'},
   // {depth: 1, title: 'React Native Router Flux', slug: 'react_native_router_flux'},
