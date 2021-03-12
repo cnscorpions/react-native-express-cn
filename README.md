@@ -12,6 +12,7 @@
 - 🚀 内容精简，特为迅速上手 React Native 开发准备
 - 😍 提供交互式例子，动动手更快熟悉知识点
 - 💪 覆盖 React Native 日常开发的绝大部分工具链
+- 🍰 加餐了开发Native Android和iOS插件
 
 <br/>
 
@@ -55,6 +56,8 @@
 |     RN Animatable     |      RN Animatable       | :white_check_mark: |
 |       Gestures        |           手势           | :white_check_mark: |
 |     Boilerplates      |           模板           | :white_check_mark: |
+
+## Native插件开发
 
 <br/>
 
