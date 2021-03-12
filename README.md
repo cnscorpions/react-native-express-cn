@@ -51,8 +51,8 @@
 |      Networking       |         网络请求         | :white_check_mark: |
 | Networking with Redux |     Redux 异步中间件     | :white_check_mark: |
 |       Animation       |           动画           | :white_check_mark: |
-|       Animated        |         Animated         |   :construction:   |
-|     RN Animatable     |      RN Animatable       |
+|       Animated        |         Animated         | :white_check_mark: |
+|     RN Animatable     |      RN Animatable       |   :construction:   |
 |       Gestures        |           手势           |
 |     Boilerplates      |           模板           |
 
