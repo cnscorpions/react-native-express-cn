@@ -248,7 +248,7 @@ let sections = [
 
   {
     depth: 0,
-    title: 'Animation',
+    title: '动画',
     slug: 'animation',
     componentName: 'Animation',
   },
