@@ -1,28 +1,27 @@
 import WebPlayer from '../components/WebPlayer'
 import example from '../examples/asyncstorage'
 
-
-`AsyncStorage` is a built-in React Native API for client-side data persistence. Here we'll cover basic usage of the API; as your data gets complex, you will likely want to use a library built on top of `AsyncStorage`, such as Redux Persist.
+`AsyncStorage`是一个内置的React Native API，用于客户端数据持久化。在这里，我们将介绍API的基本使用方法；当你的数据变得复杂时，你可能会想使用一个建立在`AsyncStorage`之上的库，比如Redux Persist。
 
 # API
 
-The AsyncStorage API is promise-based. All getting and setting of key-value pairs is asynchronous. Thanks to the new `async/await`, interacting with the API isn't much more difficult than if it were synchronous.
+AsyncStorage API是基于promise的。所有键值对的获取和设置都是异步的。多亏了新的 "async/await"，与API的交互和同步交互一样容易。
 
 ## **`await getItem(key) => ?string`**
 
-Get the `value` stored at `key`. This will return a string, or null if no data has been stored yet for that `key`. Don't forget to call `JSON.parse(value)` if you're storing your data in JSON format.
+获取存储在 "key "处的 "value"。这将返回一个字符串，如果该`key`还没有存储数据，则返回null。如果你以JSON格式存储数据，别忘了调用`JSON.parse(value)`。
 
 ## **`await setItem(key, value)`**
 
-Store `value` at `key`. Don't forget to call `JSON.stringify(value)` if you're storing your data in JSON format.
+将 "value "存储在 "key "处。如果你是以JSON格式存储数据，别忘了调用`JSON.stringify(value)`。
 
 ## **`await clear()`**
 
-Clear all stored data.
+清除所有存储的数据。
 
-## That's it!
+## 就是这样！
 
-These three APIs are frequently all you'll need. There are a few more APIs worth being aware of, in case you end up using AsyncStorage for more complex things:
+这三个API足以你的全部需求。如果你最终要使用AsyncStorage做更复杂的事情，还有一些API值得注意。
 
 - `removeItem(key)`
 - `mergeItem(key, value)`
@@ -33,18 +32,20 @@ These three APIs are frequently all you'll need. There are a few more APIs worth
 - `multiRemove(keys)`
 - `multiMerge(keyValuePairs)`
 
-Don't forget, all of these functions (including `getItem` and `setItem`) can throw errors upon failure which you'll want to handle!
+不要忘了，包括`getItem`和`setItem`在内所有函数在失败时都会抛出错误，你要处理这些错误。
 
-# Example
+# 例子
 
-Let's look at an example of getting and setting a key-value pair in `AsyncStorage`.
+让我们来看一个在`AsyncStorage`中获取和设置键值对的例子。
 
-## Files
+## 文件
 
 - `index.js`<br />
-  The `App` component loads the value at `STORAGE_KEY` into `this.state` when it mounts. Every time you type your name in the input field and hit enter, we save `name` to `STORAGE_KEY`, as well as updating the value in `this.state`. Note that we also catch errors thrown when loading/saving, which is simple thanks to `async/await`.
+
+    `App`组件在挂载时将`STORAGE_KEY`处的值加载到`this.state`中。每次你在输入栏中输入你的名字并按下回车键，我们就会将`name`保存到`STORAGE_KEY`中，同时更新`this.state`中的值。请注意，我们还可以捕捉加载/保存时抛出的错误，得益于`async/await`，这很简单。
 
 - `Input.js`<br />
-  Presentational component
+    
+    展示组件
 
 <WebPlayer {...example} />

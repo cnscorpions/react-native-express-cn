@@ -1,18 +1,17 @@
 
+客户端数据持久化对于优秀的移动体验来说往往是至关重要的：记住用户的偏好和凭证，并在应用启动时立即显示数据，而不是在远程获取数据时显示一个loading标识。
 
-Client-side data persistence is often crucial to a great mobile experience: remembering a user's preferences and credentials, and showing data immediately when the app starts, instead of showing a spinner while fetching data remotely.
+一般来说，客户端上的数据持久化有两种方式。
 
-Generally, there are two ways to persist data on the client:
+- 内置的 "AsyncStorage "API，或封装它的库。
+- 一个SQLite/原生数据库的wrapper
 
-- The built-in `AsyncStorage` API, or libraries wrapping it
-- A SQLite / native database wrapper
+# 客户端持久化常见选项
 
-# Common Options for Client-side Persistence
-
-| Option            | Description                                                                                                                                                                                                                                                                                    |
+| 选项            | 描述                                                                                                                                                                                                                                                                                    |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **AsyncStorage**  | `AsyncStorage` is a simple, low-level API for a key-value store. You can easily store and retrieve key-value pairs.                                                                                                                                                                            |
-| **Redux Persist** | [Redux Persist](https://github.com/rt2zz/redux-persist) is a library for automatically persisting the state of your Redux store to `AsyncStorage` on store changes, and rehydrating the store with this saved state when the app launches.                                                     |
-| **Realm**         | The [Realm](https://realm.io/docs/react-native/latest/) library uses a custom database, written from scratch in C to be compatible on both iOS and Android. We covered Realm separately under Data Management, but if you're using Realm for managing your data, you get persistence for free! |
+| **AsyncStorage**  | `AsyncStorage`是一个简单的、低级别的键值存储API。你可以轻松地存储和检索键值对。                                                                                                                                                                          |
+| **Redux Persist** | [Redux Persist](https://github.com/rt2zz/redux-persist) 是一个库，用于在store变化时自动将Redux store的状态持久化到 "AsyncStorage"，并在应用启动时用保存的状态为store rehydrating。                                                       |
+| **Realm**         | [Realm](https://realm.io/docs/react-native/latest/) 库使用的是自定义数据库，从头开始用C语言编写，在iOS和Android上都能兼容。我们在数据管理下单独介绍了Realm，但如果你使用Realm来管理数据，你就可以任意使用。
 
-Let's look at a few examples using `AsyncStorage` and Redux Persist.
+让我们来看几个使用`AsyncStorage`和Redux Persist的例子。

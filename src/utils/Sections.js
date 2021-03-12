@@ -215,7 +215,7 @@ let sections = [
 
   {
     depth: 0,
-    title: 'Persistence',
+    title: '数据持久化',
     slug: 'persistence',
     componentName: 'Persistence',
   },
@@ -234,7 +234,7 @@ let sections = [
 
   {
     depth: 0,
-    title: 'Networking',
+    title: '网络请求',
     slug: 'networking',
     componentName: 'Networking',
   },

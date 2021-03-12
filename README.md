@@ -45,10 +45,10 @@
 |    Data Management    |         状态管理         | :white_check_mark: |
 |    Component State    |        组件内状态        | :white_check_mark: |
 |         Redux         |          Redux           | :white_check_mark: |
-|         Realm         | 移动端款平台数据库 Realm |   :construction:   |
-|      Persistence      |        数据持久化        |
-|     Redux Persist     |    Redux 持久化中间件    |
-|      Networking       |         网络请求         |
+|         Realm         | 移动端款平台数据库 Realm | :white_check_mark: |
+|      Persistence      |        数据持久化        | :white_check_mark: |
+|     Redux Persist     |    Redux 持久化中间件    | :white_check_mark: |
+|      Networking       |         网络请求         |   :construction:   |
 | Networking with Redux |     Redux 异步中间件     |
 |       Animation       |           动画           |
 |       Animated        |         Animated         |
