@@ -1,24 +1,23 @@
 import WebPlayer from '../components/WebPlayer'
 import example from '../examples/networking_redux'
 
+默认情况下，Redux只处理同步action。然而，有一些很棒的中间件（插件）可以处理异步action。
 
-By default, Redux only handles synchronous actions. However, there are some great middlewares (plugins) for handling asynchronous actions.
+对于中小应用来说，[redux-thunk](https://github.com/gaearon/redux-thunk)这个中间件是非常有效的。它也是由redux的作者创建的，所以它几乎可以保证是高质量和紧跟redux的。
 
-For small to medium apps, the [redux-thunk](https://github.com/gaearon/redux-thunk) middleware is extremely effective. It's also created by the author of redux, so it's pretty much guaranteed to be high-quality and up-to-date.
+对于具有非常复杂的异步事件链的大型应用程序，你可能会考虑[redux-saga](https://github.com/yelouafi/redux-saga)，它是一个非常强大但又难以理解的管理流控制的复杂框架。你可以把sagas看作是后台守护进程，可以分叉和加入这些进程，保持对应用中异步事件的完全控制。这些有利于测试。
 
-For large apps with very complex asynchronous chains of events, you may want to consider [redux-saga](https://github.com/yelouafi/redux-saga), which is an extremely powerful but mind-bendingly complex framework for managing flow control. You can think of sagas as background daemon processes, which you can fork and join, maintaining complete control over the asynchronous events in your app. These are also great for testability.
+# 帖子例子
 
-# Posts Example
+让我们来看看 "redux-thunk "的操作。我们会在应用启动时自动获取帖子，并提供一个按钮来刷新它们。
 
-Let's look at `redux-thunk` in action. We'll automatically fetch posts when the app starts, and provide a button to refresh them.
+得益于Redux Thunk，我们现在可以dispatch函数。当我们dispatch一个函数时，我们必须返回一个以`(dispatch, getState)`为prop的函数。使用`dispatch`，我们的函数可以dispatch其他action。我们还可以通过调用`getState()`来查看store的当前状态。
 
-Thanks to Redux Thunk, we can now dispatch functions. When we dispatch a function, we must return a function that takes `(dispatch, getState)` as props. Using `dispatch`, our function can dispatch other actions. We can also view the current state of the store by calling `getState()`.
-
-## Files
+## 文件
 
 - `index.js`<br />
 
-    这个文件中创建redux store并将其传递给我们的`Provider`。它还将 "thunk "中间件应用到store，以处理异步操作。
+    这个文件中创建redux store并将其传递给我们的`Provider`。它还将 "thunk"中间件应用到store，以处理异步操作。
 
 - `postsRedux.js`<br />
 
@@ -26,6 +25,6 @@ Thanks to Redux Thunk, we can now dispatch functions. When we dispatch a functio
 
 - `App.js`<br />
 
-    `App`使用`connect()`连接到store。它从redux商店中提取帖子数据，以及加载和错误的状态。
+    `App`使用`connect()`连接到store。它从redux store中提取帖子数据，以及加载和错误的状态。
 
 <WebPlayer {...example} />

@@ -49,8 +49,8 @@
 |      Persistence      |        数据持久化        | :white_check_mark: |
 |     Redux Persist     |    Redux 持久化中间件    | :white_check_mark: |
 |      Networking       |         网络请求         | :white_check_mark: |
-| Networking with Redux |     Redux 异步中间件     |   :construction:   |
-|       Animation       |           动画           |
+| Networking with Redux |     Redux 异步中间件     | :white_check_mark: |
+|       Animation       |           动画           |   :construction:   |
 |       Animated        |         Animated         |
 |     RN Animatable     |      RN Animatable       |
 |       Gestures        |           手势           |

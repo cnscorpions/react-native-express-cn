@@ -243,7 +243,7 @@ let sections = [
     title: 'Redux 异步中间件',
     slug: 'networking_redux',
     componentName: 'NetworkingRedux',
-    fullTitle: 'Networking with Redux',
+    fullTitle: 'Redux 异步中间件',
   },
 
   {
