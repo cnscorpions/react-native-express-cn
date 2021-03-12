@@ -240,7 +240,7 @@ let sections = [
   },
   {
     depth: 1,
-    title: 'With Redux',
+    title: 'Redux 异步中间件',
     slug: 'networking_redux',
     componentName: 'NetworkingRedux',
     fullTitle: 'Networking with Redux',

@@ -48,8 +48,8 @@
 |         Realm         | 移动端款平台数据库 Realm | :white_check_mark: |
 |      Persistence      |        数据持久化        | :white_check_mark: |
 |     Redux Persist     |    Redux 持久化中间件    | :white_check_mark: |
-|      Networking       |         网络请求         |   :construction:   |
-| Networking with Redux |     Redux 异步中间件     |
+|      Networking       |         网络请求         | :white_check_mark: |
+| Networking with Redux |     Redux 异步中间件     |   :construction:   |
 |       Animation       |           动画           |
 |       Animated        |         Animated         |
 |     RN Animatable     |      RN Animatable       |

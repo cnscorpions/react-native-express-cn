@@ -1,40 +1,39 @@
 import WebPlayer from '../components/WebPlayer'
 import example from '../examples/networking'
 
+React Native中的`Networking`是建立在两个API之上，`fetch`和`XMLHttpRequest`。这两个API的设计都是为了与浏览器API兼容，因此：
 
-`Networking` in React Native is built on two APIs: `fetch` and `XMLHttpRequest`. Both of these were designed to be compatible with browser APIs so that:
+- web开发人员不必学习一种新的网络请求方式。
+- 在这些基础上构建的库在React Native中发挥了预期的功能。
 
-- Web developers don't have to learn a new way to make network requests
-- Libraries built on top of these function as expected in React Native
+直接使用`fetch`API而非`XMLHttpRequest`，因为前者比后者更简单，更高级。如果你的网络请求需求更高级（multi-part form请求等），你可能会想要使用一个抽象过的库。
 
-It's common to use the `fetch` API directly, since it's pretty simple and high-level. It's rare to use XMLHttpRequest directly, since it's complex and low-level. If your networking needs are advanced (multi-part form requests, etc), you'll likely want to use a library which abstracts the details of these networking APIs.
-
-If you're looking for an abstraction layer, the common networking libraries like `axios` and `superagent` will still work in React Native.
+常见的网络请求库如`axios`和`superagent`仍然可以在React Native中工作。
 
 # Fetch API
 
-Let's take a look at `fetch`, since it's easy to use and comes with React Native out of the box. The Fetch API is promise-based, meaning we can use `async/await`.
+让我们来看看`fetch`，它很容易使用，在React Native中开箱即用的。Fetch API是基于promise的，也就是说我们可以使用`async/await`。
 
 ## **`const response = await fetch(uri)`**
 
-Send a `GET` request to `uri`, returning a promise which represents a `Response` object. To access the data returned, you must either await `response.text()` or `response.json()`.
+向`uri`发送`GET`请求，返回一个代表`Response`对象的promise。要访问返回的数据，你必须await `response.text()`或`response.json()`。
 
 ## **`const json = await response.json()`**
 
-Parse the body of the response asynchronously as JSON.
+将响应体异步解析为JSON格式。
 
 ## **`const text = await response.text()`**
 
-Get the body of the response as text.
+以文本格式获取响应体。
 
-## That's it!
+## 就是这样！
 
-We can get started using `fetch` with just that! If you want to use fetch with custom request headers or for `POST` requests, read more about the API [here at MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
+我们开始使用`fetch`! 如果你想在自定义的请求头或`POST`请求中使用fetch，请阅读更多关于API的信息[在MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)。
 
 # Example
 
-Here we'll fetch a list of posts and display them in a ScrollView. Since `fetch` is asynchronous, our app may not have data when it loads. We should be prepared to show an `ActivityIndicator` (spinner) while data loads. We should also be prepared to show an error message if fetching data fails.
+我们将获取一个帖子列表，并在ScrollView中显示它们。由于`fetch`是异步的，所以我们的应用在加载时可能没有数据。我们应该准备好在数据加载时显示一个`ActivityIndicator`（loading动画）。我们还应该准备好在获取数据失败时显示一个错误信息。
 
-_Note: fetch may not work if you're using an older browser._
+*注意：如果你使用的是旧版浏览器，fetch可能无法使用。*
 
 <WebPlayer {...example} />
